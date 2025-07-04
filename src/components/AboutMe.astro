@@ -1,79 +1,61 @@
 ---
- const personalImageAlt = "Miguel Ángel"
+const personalImageAlt = "Ignacio Borlenghi";
+const birthDate = new Date(2002, 1, 25); // Mes 1 = Febrero (los meses empiezan en 0)
+const today = new Date();
+let currentAge = today.getFullYear() - birthDate.getFullYear();
+const hasHadBirthday =
+  today.getMonth() > birthDate.getMonth() ||
+  (today.getMonth() === birthDate.getMonth() &&
+    today.getDate() >= birthDate.getDate());
+if (!hasHadBirthday) currentAge--;
 ---
 
-<article class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row">
+<article
+  class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row"
+>
   <div
     class="[&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
   >
     <p>
-      Me llamo Miguel Ángel pero mis amigos me llaman midu. Empecé en la
-      programación con un Amstrad, tenía 10 años. Actualmente estoy <strong
-        >liderando equipos de desarrollo en multinacionales</strong
-      >.
+      Me llamo Ignacio Borlenghi y tengo <strong>{currentAge} años</strong>.
+      Desde muy chico sentí una gran curiosidad por cómo funcionan las
+      computadoras 🖥️🔧. Pasaba horas explorando, aprendiendo y usándolas para
+      todo tipo de tareas, mucho antes de saber que eso se llamaba “<em
+        class="italic">programar</em
+      >” 💡👦.
     </p>
 
     <p>
-      Algunos de mis éxitos incluyen <strong
-        >colaborar con Mozilla para el desarrollo de las primeras apps en su
-        sistema FirefoxOS</strong
-      >. Aunque hoy está desaparecido fue un gran avance en el mundo del
-      desarrollo web.
+      🚀 Esa curiosidad inicial fue el motor que me llevó a estudiar en la
+      universidad 🎓 y, con el tiempo, a dedicarme al <strong
+        >desarrollo de software</strong
+      > 💻. A lo largo de los años, esa misma motivación me sigue empujando a aprender,
+      crear y <strong>resolver problemas a través del código</strong> 🧠⚙️.
     </p>
 
     <p>
-      Como creador de contenido, <strong
-        >cuento con el canal de habla hispana más visto del mundo en la
-        categoría de <em class="italic">Software & Game Development</em> en Twitch</strong
-      >. Mi objetivo es mejorar la empleabilidad de la comunidad hispana y el
-      acceso a contenido de calidad.
+      🧑‍💻 Soy <strong>desarrollador de software</strong> y aprendo todos los días
+      📚. Me motiva entender problemas reales y construir soluciones que realmente
+      ayuden a las personas 🤝. Empecé siendo <strong>autodidacta</strong> y nunca
+      dejé de aprender: libros, proyectos personales, estudios formales y, sobre
+      todo, mucha práctica 🛠️.
+    </p>
+
+    <p>
+      💬 Disfruto <strong
+        >compartir conocimiento, participar en comunidades, debatir ideas y
+        aprender del trabajo en equipo</strong
+      > 🤓👥. Me apasiona trabajar en entornos que me reten a crecer 🌱, donde pueda
+      aportar y a la vez seguir evolucionando como profesional 🌟.
     </p>
   </div>
 
-  <img width="200" height="200" src="/me.png" alt={personalImageAlt} class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20 " style="object-position: 50% 50%">
-
+  <img
+    width="200"
+    height="200"
+    src="/me.png"
+    alt={personalImageAlt}
+    class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20"
+    style="object-position: 50% 50%"
+  />
 </article>
-
-<!-- FRASES PROHIBIDAS EN VUESTRO PORTFOLIO
-
-<p>
-  Mi sueño es encontrar mi primer empleo en el mundo de la programación. Una empresa donde pueda seguir aprendiendo. ❌
-</p>
-
-<p>
-  ❌ Apasionado de la programación desde chekitito. Me encantan los ordenadores y crear páginas web buenas y rápidas con la última tecnología.
-</p>
-
-<p>
-  Trabajo bien en equipo. Siempre estoy aprendiendo cosas nuevas.
-</p>
-
--------------------------------------
-
---------------------------------------
-
-<p>
-  ¡Soy Leo! Estudié Derecho Empresarial y, tras años ejerciendo, me pasé al mundo de la Programación. Desde entonces disfruto creando experiencias web para los usuarios.
-</p>
-
-<p>
-  Entre mis éxitos destaco que durante el Grado Superior, ayudé a mis compañeros a aprender sobre TDD. Me encanta el testing, creo en su importancia, y me gusta compartir mi conocimiento sobre ello.
-</p>
-
-<p>
-  Cuento con experiencia desarrollando aplicaciones móviles, y he creado una iniciativa llamada X para mezclar mis dos pasiones: la programación y el derecho. Ayudando a la sociedad a acceso a una defensa justa.
-</p>
-
----------------------------------------
-
-<p>Me llamo Sara, tengo 25 años y soy de Santiago, Chile 🇨🇱. Terminé mis estudios como Desarrolladora Web. Me encanta enfocarme en la parte del rendimiento, para ofrecer la mejora experiencia al usuario.</p>
-
-<p>
-  Colaboro en la organización del MeetUp local BeerJS donde reunimos a desarrolladores de Santiago para compartir conocimiento y experiencias. El año 2023 hicimos un total de 25 charlas con más de 2000 asistentes.
-</p>
-
-<p>
-  Además de participar activamente en la comunidad, he participado en la Hackathon de Midudev quedando en 3er puesto con mi proyecto _Chatty_, donde usando IA podías interactuar con un PDF. ¡Échale un vistazo!
-</p>
-
--->
